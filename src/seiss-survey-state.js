@@ -10,7 +10,7 @@ const SEISS_SURVEY_STATE = (() => {
   const questions = [
     {
       id: -1,
-      QC: 'You\'ve finished and our survey says... you have issues',
+      QC: 'You\'ve finished our survey we hope it helped you, if you have any issues regarding UK tax do not hesitate to <a href="https://bambridgeaccountants.com/contact-us" target="_blank" class="blog-link">contact us</a>.',
       NQ: [-1],
       PQ: state.PQ,
       PA: state.PA,
@@ -29,7 +29,8 @@ const SEISS_SURVEY_STATE = (() => {
       QC: 'Has your trade been adversely affeted by the coronavirus pandemic?',
       options: ['Yes', 'No'],
       NQ: [3],
-      DNQ: [false, false]
+      DNQ: [false, false],
+      statement: ''
     },
     {
       id: 3,
@@ -60,7 +61,7 @@ const SEISS_SURVEY_STATE = (() => {
       QC: 'Were your profits in 2019/20 <span class="fw-bold" style="font-weight: bold">less than</span> £50,000',
       options: ['Yes', 'No'],
       NQ: [-1],
-      DNQ: [true, false],
+      DNQ: [false, true],
       statement: 'You must have earned less than £50,000 in the 2019/20 tax year'
     },
   ]
@@ -86,6 +87,7 @@ const SEISS_SURVEY_STATE = (() => {
       state.PA.pop()
     },
     updateDoesNotQualify: (q) => {
+    
       state.DNQ.push({question: q.id, statement: q.statement})
     }
   }

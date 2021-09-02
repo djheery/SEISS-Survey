@@ -2,6 +2,13 @@
   font-size: .9em;
 }
 
+.logo {
+  letter-spacing: .2rem;
+}
+
+.bacc-warning {
+  color: #ff0f0f
+}
 @media only screen and (min-width: 700px) {
   .calc-sub-heading {
     font-size: unset;

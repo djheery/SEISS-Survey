@@ -19,8 +19,9 @@ const SEISS_SURVEY_APP = (() => {
       const nextQuestion = questions.find(q => q.id === targetID)
       SEISS_SURVEY_STATE.updateCurrentQuestion(nextQuestion.id)
       SEISS_SURVEY_STATE.updateNextQuestion(nextQuestion.NQ[0])
-      SEISS_SURVEY_UI.displayNextQuestion(nextQuestion)
-      console.log(state)
+      nextQuestion.NQ !== -1 ?
+        SEISS_SURVEY_UI.displayNextQuestion(nextQuestion) :
+        SEISS_SURVEY_UI.displayFinalVerdict(nextQuestion)
       SEISS_SURVEY_UI.transitionIn()
     }, 800)
   }

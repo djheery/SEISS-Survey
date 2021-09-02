@@ -46,12 +46,13 @@ input[type='radio']:hover {
   align-items: center;
   justify-content: center;
   border: .5px solid #aaa;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   position: relative;
   background-color: #fff;
   transition: border .1s;
+  margin-right: 10px;
 }
 
 .radio-y-n label /* .radio-multiple label */ {

@@ -31,7 +31,7 @@ const SEISS_SURVEY_UI = (() => {
 
     },
     displayFinalVerdict: () => {
-
+      selectors.answerContainer.innerHTML = 'YOU BITCH'
     },
     setBtnData: () => {
 

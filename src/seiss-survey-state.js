@@ -9,7 +9,7 @@ const SEISS_SURVEY_STATE = (() => {
   const questions = [
     {
       id: 1,
-      QC: 'Text',
+      QC: 'Does your income from your self employed work make up over 50% of your Annual Income?',
       options: ['Yes', 'No'],
       NQ: [2]
     },

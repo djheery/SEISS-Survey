@@ -13,12 +13,16 @@ const SEISS_SURVEY_APP = (() => {
   }
 
   const nextQuestion = () => {
-    const targetID = parseInt(ui.answerContainer.dataset.nextquestion)
-    const nextQuestion = questions.find(q => q.id === targetID)
-    SEISS_SURVEY_STATE.updateCurrentQuestion(nextQuestion.id)
-    SEISS_SURVEY_STATE.updateNextQuestion(nextQuestion.NQ[0])
-    SEISS_SURVEY_UI.displayNextQuestion(nextQuestion)
-    console.log(state)
+    SEISS_SURVEY_UI.transitionOut()
+    setTimeout(() => {
+      const targetID = parseInt(ui.answerContainer.dataset.nextquestion)
+      const nextQuestion = questions.find(q => q.id === targetID)
+      SEISS_SURVEY_STATE.updateCurrentQuestion(nextQuestion.id)
+      SEISS_SURVEY_STATE.updateNextQuestion(nextQuestion.NQ[0])
+      SEISS_SURVEY_UI.displayNextQuestion(nextQuestion)
+      console.log(state)
+      SEISS_SURVEY_UI.transitionIn()
+    }, 800)
   }
 
   const previousQuestion = () => {

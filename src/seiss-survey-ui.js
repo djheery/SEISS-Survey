@@ -16,6 +16,7 @@ const SEISS_SURVEY_UI = (() => {
       if(q.id !== -1) {
         selectors.answerContainer.dataset.nextquestion = q.NQ[0]
         selectors.questionContainer.innerHTML = q.QC
+        selectors.answerContainer.innerHTML = ''
         for(let i = 0; i < q.options.length; i++) {
           selectors.answerContainer.innerHTML += `
           <div class="radio-btn-container radio-y-n">

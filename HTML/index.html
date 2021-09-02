@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/CSS/tooltip.css">
   <link rel="stylesheet" href="/CSS/results.css">
   <link rel="stylesheet" href="/CSS/buttons.css">
+  <link rel="stylesheet" href="/CSS/radio.css">
   <link rel="stylesheet" href="/CSS/text.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,28 +19,28 @@
   <title>UK Filing Survey</title>
 </head>
 <body>
-  <div class="bacc-calculator">
-    <div class="bacc-calculator__inner-container bacc-calculator__border">
-      <div class="question-data__card">
-        <div class="question-data__inner-container">
-          <div class="question-data__logo-heading">
-            <h3 class="logo text-center mgb-20">Bambridge <span class="accent-clr">|</span> Accountants</h3>
-            <p class="sub-heading mgb-20">This survey can help you work out whether you may have to file a tax return. The estimated time of this survey is 5 minutes</p>
-          </div>
-          <div class="question-container mgb-20"></div> <!-- Question Container-->
-          <div class="answer-options-container flex mgb-20" data-id="NaN"></div> <!-- Answer Container-->
-          <div class="question-btn__container flex mgb-20"> <!-- Button Container-->
-            <button class="start-survey-btn">Click To Start</button>
+  <div class="template">
+    <div class="bacc-calculator">
+      <div class="bacc-calculator__inner-container bacc-calculator__border">
+        <div class="question-data__card">
+          <div class="question-data__inner-container">
+            <div class="question-data__logo-heading">
+              <h3 class="logo text-center mgb-20 text-upper">Bambridge <span class="accent-clr">|</span> Accountants</h3>
+              <p class="sub-heading mgb-20">Find out if you qualify for the SEISS grant 5 by taking this quick survey. Estimated time taken to complete this survey is less than 1 minute</p>
+            </div>
+            <div class="question-container mgb-20"></div> <!-- Question Container-->
+            <div class="answer-options-container flex mgb-20" data-nextQuestion="1"></div> <!-- Answer Container-->
+            <div class="question-btn__container flex mgb-20"> <!-- Button Container-->
+              <button class="start-survey-btn" >Click To Start</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="/src/uk-filing-survey-storage.js"></script>
-  <script src="/src/uk-filing-survey-question-state.js"></script>
-  <script src="/src/uk-filing-survey-logic.js"></script>
-  <script src="/src/uk-filing-survey-ui.js"></script>
-  <script src="/src/uk-filing-survey-app.js"></script>
+  <script src="/src/seiss-survey-state.js"></script>
+  <script src="/src/seiss-survey-ui.js"></script>
+  <script src="/src/seiss-survey-app.js"></script>
 </body>
 </html>

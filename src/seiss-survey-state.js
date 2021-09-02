@@ -61,7 +61,7 @@ const SEISS_SURVEY_STATE = (() => {
     getQuestions: () => {
       return questions
     },
-    surveyState: () => {
+    getState: () => {
       return state
     },
     updateCurrentQuestion: (CQ) => {
@@ -72,14 +72,6 @@ const SEISS_SURVEY_STATE = (() => {
     },
     updatePreviousQuestion: (PQ, t, type) => {
       state.PQ.push(PQ)
-      console.log(type)
-      if(type === 'INPUT') state.PA.push(state.input)
-      if(type === 'CHECKBOX') state.PA.push(state.checkboxSelection)
-      if(type !== 'CHECKBOX' && type !== 'INPUT') {
-        state.PA.push(t.firstElementChild.textContent)
-      }
-
-      console.log(state.PA)
     }, 
     removePreviousQuestion: (Q) => {
       state.PQ.pop()
